@@ -10,7 +10,7 @@ mysql -e "GRANT ALL ON wordpress.* TO 'admin'@'localhost';"
 
 mysql -e "GRANT ALL ON phpmyadmin.* TO 'admin'@'localhost';"
 
-mysql < /var/www/localhost/ft_services/phpmyadmin/sql/create_tables.sql
+mysql < /srcs/MySQL/srcs/create_tables.sql
 
 mysql -e "FLUSH PRIVILEGES;"
 
