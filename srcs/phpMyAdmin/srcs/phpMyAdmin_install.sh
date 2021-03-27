@@ -8,4 +8,4 @@ mv phpMyAdmin-4.9.5-english phpmyadmin
 
 rm -rf phpMyAdmin-4.9.5-english.tar.gz /var/www/localhost/ft_services/phpmyadmin/config.sample.inc.php
 
-mv /srcs/phpMyAdmin/srcs/config.inc.php /var/www/localhost/ft_services/phpmyadmin
+mv /srcs/config.inc.php /var/www/localhost/ft_services/phpmyadmin

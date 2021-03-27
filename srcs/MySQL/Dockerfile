@@ -1,5 +1,11 @@
-FROM ft_services:latest
+FROM alpine:latest
 
-RUN apk add mysql mysql-client
+RUN apk update && apk upgrade
+RUN apk add nginx vim openrc mysql mysql-client
 
-RUN sh /srcs/MySQL/srcs/mysql_install.sh
+RUN openrc
+RUN touch run/openrc/softlevel
+
+COPY srcs ./srcs
+
+RUN sh srcs/MySQL_install.sh
