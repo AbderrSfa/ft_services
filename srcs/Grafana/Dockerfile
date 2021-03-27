@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk update && apk upgrade
-RUN apk add nginx vim openrc php7 php7-fpm php7-mysqli php7-phar php7-json php7-mbstring 
+RUN apk add nginx vim openrc php7 php7-fpm php7-mysqli php7-phar php7-json php7-mbstring grafana 
 
 RUN openrc
 RUN touch run/openrc/softlevel
