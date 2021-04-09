@@ -1,4 +1,4 @@
-docker build -t nginx .
+docker build -t nginx ./srcs/nginx
 
 docker build -t grafana ./srcs/Grafana
 

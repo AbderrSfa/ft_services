@@ -13,4 +13,3 @@ mysql -e "GRANT ALL ON phpmyadmin.* TO 'admin'@'localhost';"
 mysql < /srcs/create_tables.sql
 
 mysql -e "FLUSH PRIVILEGES;"
-

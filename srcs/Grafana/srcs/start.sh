@@ -9,6 +9,9 @@ ENGINEX=$?
 service php-fpm7 start
 PHP_FPM=$?
 
+service grafana start
+GRAFANA=$?
+
 echo " ---> Server is running..."
 
 # While services are running, the container remains up.
@@ -19,11 +22,14 @@ do
 	ENGINEX=$?
 	service php-fpm7 status > /dev/null
 	PHP_FPM=$?
+	service grafana status > /dev/null
+	GRAFANA=$?
 done
 
 # If an error occurs, all services are stopped and container exits.
 service nginx stop
 service php-fpm7 stop
+service grafana stop
 
 echo " ---> Stopping server..."
 echo " ---> Exiting container..."
