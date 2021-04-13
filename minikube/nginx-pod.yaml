@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    type: web 
+  name: nginx
+spec:
+  containers:
+  - image: phpmyadmin
+    name: phpmyadmin
+    imagePullPolicy: Never

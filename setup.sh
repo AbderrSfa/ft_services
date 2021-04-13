@@ -1,3 +1,7 @@
+docker-machine create --driver virtualbox default
+
+eval $(docker-machine env default)
+
 docker build -t nginx ./srcs/nginx
 
 docker build -t grafana ./srcs/Grafana
