@@ -10,4 +10,4 @@ COPY srcs ./srcs
 
 RUN sh srcs/MySQL_install.sh
 
-CMD sh ./srcs/start.sh
+#CMD sh ./srcs/start.sh
