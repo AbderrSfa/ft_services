@@ -1,14 +1,12 @@
 #!bin/sh
 
-/etc/init.d/mariadb stop
-
 # Start Nginx.
 # Variables store output from last command. 0 if successful, non-zero if failed.
 
 service nginx start
 ENGINEX=$?
 
-/etc/init.d/mariadb start
+/etc/init.d/mariadb restart
 MYSQL=$?
 
 echo " ---> Server is running..."
