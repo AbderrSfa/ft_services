@@ -15,4 +15,4 @@ RUN mv /srcs/default.conf /etc/nginx/conf.d/default.conf
 
 RUN sh /srcs/wordpress_install.sh
 
-CMD sh ./srcs/start.sh
+#CMD sh ./srcs/start.sh
