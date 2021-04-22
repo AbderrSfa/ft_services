@@ -12,6 +12,6 @@ RUN mkdir -p /var/www/localhost/ft_services
 
 RUN mv /srcs/default.conf /etc/nginx/conf.d/default.conf
 
-#RUN sh /srcs/InfluxDB_install.sh
+#RUN sh /srcs/influxdb_install.sh
 
 CMD sh ./srcs/start.sh
