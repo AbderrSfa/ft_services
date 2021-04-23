@@ -6,4 +6,4 @@ RUN apk add vim openrc vsftpd
 RUN openrc
 RUN touch run/openrc/softlevel
 
-COPY vsftpd.conf /etc/vsftpd/vsftpd.conf
+COPY srcs/vsftpd.conf /etc/vsftpd/vsftpd.conf
