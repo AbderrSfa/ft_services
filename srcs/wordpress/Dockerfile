@@ -7,12 +7,13 @@ RUN apk add lighttpd php7-common php7-session php7-iconv php7-json php7-gd php7-
 RUN openrc
 RUN touch run/openrc/softlevel
 
-COPY srcs ./srcs
+COPY srcs/default.conf /etc/nginx/conf.d/default.conf
 
-RUN mkdir -p /var/www/localhost/ft_services
-
-RUN mv /srcs/default.conf /etc/nginx/conf.d/default.conf
-
-RUN sh /srcs/wordpress_install.sh
+RUN wget https://wordpress.org/latest.tar.gz \
+&& tar -xvf latest.tar.gz \
+&& mv wordpress /var/www/wordpress \
+&& rm -rf latest.tar.gz /var/www/wordpress/wp-config-sample.php
+COPY srcs/wp-config.php /var/www/wordpress/
+RUN chown -R nginx:nginx /var/www/wordpress/
 
 #CMD sh ./srcs/start.sh

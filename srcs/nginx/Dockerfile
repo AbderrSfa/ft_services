@@ -8,8 +8,8 @@ RUN touch run/openrc/softlevel
 
 COPY srcs ./srcs
 
-RUN mkdir -p /var/www/localhost/ft_services
-RUN mv /srcs/index.html /var/www/localhost/ft_services/
+#RUN mkdir -p /var/www/localhost/ft_services
+RUN mv /srcs/index.html /var/www/
 RUN mv /srcs/default.conf /etc/nginx/conf.d/default.conf
 
 RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/selfsigned-ft_services.key -out /etc/ssl/certs/selfsigned-ft_services.crt -subj "/C=MA/ST=Beni Mellal-Khenifra/L=Khouribga/O=1337/CN=ft_services"
