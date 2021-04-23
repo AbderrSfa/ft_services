@@ -6,7 +6,7 @@
 service nginx start
 ENGINEX=$?
 
-/etc/init.d/mariadb restart
+/etc/init.d/mariadb start
 MYSQL=$?
 
 echo " ---> Server is running..."
