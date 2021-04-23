@@ -20,4 +20,5 @@ RUN wget https://files.phpmyadmin.net/phpMyAdmin/5.1.0/phpMyAdmin-5.1.0-all-lang
 &&  mv phpMyAdmin-5.1.0-all-languages /var/www/phpmyadmin
 COPY srcs/config.inc.php /var/www/phpmyadmin
 
-#CMD sh ./srcs/start.sh
+COPY srcs/start.sh /
+#CMD sh ./start.sh

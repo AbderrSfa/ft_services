@@ -8,6 +8,8 @@ RUN touch run/openrc/softlevel
 
 COPY srcs ./srcs
 
-RUN sh srcs/mysql_install.sh
+RUN sh srcs/mysql_setup.sh
 
-#CMD sh ./srcs/start.sh
+RUN mv /srcs/start.sh /
+
+#CMD sh ./start.sh
