@@ -6,7 +6,7 @@
 service nginx start
 ENGINEX=$?
 
-/etc/init.d/mariadb start
+service mariadb start
 MYSQL=$?
 
 echo " ---> Server is running..."
@@ -17,13 +17,13 @@ do
 	sleep 15
 	service nginx status > /dev/null
 	ENGINEX=$?
-	/etc/init.d/mariadb status > /dev/null
+	service mariadb status > /dev/null
 	MYSQL=$?
 done
 
 # If an error occurs, all services are stopped and container exits.
 service nginx stop
-/etc/init.d/mariadb stop
+service mariadb stop
 
 echo " ---> Stopping server..."
 echo " ---> Exiting container..."
