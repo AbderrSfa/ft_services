@@ -21,4 +21,4 @@ RUN wget https://files.phpmyadmin.net/phpMyAdmin/5.1.0/phpMyAdmin-5.1.0-all-lang
 COPY srcs/config.inc.php /var/www/phpmyadmin
 
 COPY srcs/start.sh /
-#CMD sh ./start.sh
+CMD sh ./start.sh
