@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk update && apk upgrade
-RUN apk add vim openrc vsftpd openssl lftp
+RUN apk add vim openrc vsftpd openssl lftp telegraf
 
 RUN openrc
 RUN touch run/openrc/softlevel

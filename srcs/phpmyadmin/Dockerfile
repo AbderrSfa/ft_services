@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk update && apk upgrade
-RUN apk add nginx vim openrc 
+RUN apk add nginx vim openrc telegraf
 
 RUN apk add php7-fpm php7-common php7-iconv php7-json php7-gd php7-curl \
    php7-xml php7-mysqli php7-imap php7-cgi fcgi php7-pdo php7-pdo_mysql \

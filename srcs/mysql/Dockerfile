@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk update && apk upgrade
-RUN apk add nginx vim openrc mysql mysql-client
+RUN apk add nginx vim openrc mysql mysql-client telegraf
 
 RUN openrc
 RUN touch run/openrc/softlevel
