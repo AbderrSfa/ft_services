@@ -11,13 +11,12 @@ RUN apk add php7-fpm php7-common php7-iconv php7-json php7-gd php7-curl \
 RUN openrc
 RUN touch run/openrc/softlevel
 
-#RUN service influxdb start \
-#&& influx -execute 'CREATE USER telegraf WITH PASSWORD 'password';' \
-#&& influx -execute 'GRANT ALL ON telegraf TO telegraf;'
-
 COPY srcs/default.conf /etc/nginx/conf.d/default.conf
-#COPY srcs/telegraf.conf /etc/telegraf.conf
+COPY srcs/telegraf.conf /etc/telegraf.conf
 
+#RUN service influxdb start && service telegraf start \
+#&& influx -execute "CREATE USER telegraf WITH PASSWORD 'password';" \
+#&& influx -execute "GRANT ALL ON telegraf TO telegraf;"
 
 #RUN wget https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.4-linux-amd64.tar.gz \
 #&& tar -xvf influxdb2-2.0.4-linux-amd64.tar.gz \
