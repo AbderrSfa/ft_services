@@ -21,4 +21,4 @@ COPY srcs/wp-config.php /var/www/wordpress/
 RUN chown -R nginx:nginx /var/www/wordpress/
 
 COPY srcs/start.sh /
-#CMD sh ./start.sh
+CMD sh ./start.sh

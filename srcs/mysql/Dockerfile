@@ -19,4 +19,4 @@ RUN /etc/init.d/mariadb setup \
 && service mariadb stop
 
 COPY srcs/start.sh /
-#CMD sh ./start.sh
+CMD sh ./start.sh

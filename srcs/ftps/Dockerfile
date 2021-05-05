@@ -13,3 +13,4 @@ COPY srcs/vsftpd.conf /etc/vsftpd/vsftpd.conf
 RUN adduser abderr -D
 
 COPY srcs/start.sh /start.sh
+CMD sh start.sh
