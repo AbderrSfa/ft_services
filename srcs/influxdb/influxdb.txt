@@ -1,3 +1,0 @@
-./influxd &
-
-./influx setup
