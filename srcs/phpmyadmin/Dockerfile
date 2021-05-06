@@ -16,8 +16,8 @@ COPY srcs/default.conf /etc/nginx/conf.d/default.conf
 
 RUN wget https://files.phpmyadmin.net/phpMyAdmin/5.1.0/phpMyAdmin-5.1.0-all-languages.tar.gz \
 &&  tar -xzvf phpMyAdmin-5.1.0-all-languages.tar.gz \
-&&  rm phpMyAdmin-5.1.0-all-languages.tar.gz \
-&&  mv phpMyAdmin-5.1.0-all-languages /var/www/phpmyadmin
+&&  mv phpMyAdmin-5.1.0-all-languages /var/www/phpmyadmin \
+&&  rm phpMyAdmin-5.1.0-all-languages.tar.gz /var/www/phpmyadmin/config.sample.inc.php
 COPY srcs/config.inc.php /var/www/phpmyadmin
 
 COPY srcs/start.sh /

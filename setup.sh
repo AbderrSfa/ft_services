@@ -1,7 +1,7 @@
-#!bin/sh
-
 docker-machine create --driver virtualbox default
+
 eval $(docker-machine env default)
+
 docker build -t nginx ./srcs/nginx
 docker build -t grafana ./srcs/grafana
 docker build -t influxdb ./srcs/influxdb

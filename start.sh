@@ -1,5 +1,3 @@
-#!bin/sh
-
 eval $(docker-machine env default)
 
 tput setaf 2

@@ -1,9 +1,9 @@
-#!bin/sh
-
 tput setaf 2
 echo "--- Stopping containers ..."
 echo "--- Hang tight. This may take a while ...\n"
 tput init
+
+eval $(docker-machine env default)
 
 docker stop ftps
 docker stop grafana
