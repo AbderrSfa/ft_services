@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: yoink
+  labels:
+    app: yoink
+spec:
+  containers:
+  - name: yoink
+    image: yoink
+    imagePullPolicy: Never

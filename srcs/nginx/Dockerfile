@@ -1,7 +1,10 @@
-FROM alpine:latest
+FROM alpine:3.12
 
 RUN apk update && apk upgrade
-RUN apk add nginx vim openrc openssl telegraf
+RUN apk add nginx vim openrc openssl
+
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
+&& apk add telegraf
 
 RUN openrc
 RUN touch run/openrc/softlevel
