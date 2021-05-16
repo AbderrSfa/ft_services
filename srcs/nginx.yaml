@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-depl
+  name: nginx-deployment
   labels:
     app: nginx
 spec:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx-abderr
+        image: nginx:abderr
         imagePullPolicy: Never
         ports:
         - containerPort: 80
