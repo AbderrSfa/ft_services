@@ -5,7 +5,6 @@ metadata:
   labels:
     app: phpmyadmin
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: phpmyadmin
@@ -17,7 +16,6 @@ spec:
       containers:
       - name: phpmyadmin
         image: phpmyadmin:abderr
-        imagePullPolicy: Never
         ports:
         - containerPort: 5000
 

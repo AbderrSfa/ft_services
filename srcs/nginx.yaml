@@ -5,7 +5,6 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -17,7 +16,6 @@ spec:
       containers:
       - name: nginx
         image: nginx:abderr
-        imagePullPolicy: Never
         ports:
         - containerPort: 80
         - containerPort: 443

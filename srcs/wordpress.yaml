@@ -5,7 +5,6 @@ metadata:
   labels:
     app: wordpress
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: wordpress
@@ -17,7 +16,6 @@ spec:
       containers:
       - name: wordpress
         image: wordpress:abderr
-        imagePullPolicy: Never
         ports:
         - containerPort: 5050
 
