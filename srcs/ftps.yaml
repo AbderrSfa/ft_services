@@ -18,6 +18,7 @@ spec:
         image: ftps:abderr
         ports:
         - containerPort: 21
+        - containerPort: 20000
 
 ---
 
@@ -32,7 +33,11 @@ spec:
     app: ftps
   type: LoadBalancer
   ports:
-    - name: ftps
+    - name: command
       protocol: TCP
       port: 21
       targetPort: 21
+    - name: data
+      protocol: TCP
+      port: 20000
+      targetPort: 20000
