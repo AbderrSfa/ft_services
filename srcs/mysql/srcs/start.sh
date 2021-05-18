@@ -3,12 +3,19 @@
 # Start services.
 # Variables store output from last command. 0 if successful, non-zero if failed.
 
+/etc/init.d/mariadb setup
+
 service nginx start
 ENGINEX=$?
 service mariadb start
 MYSQL=$?
 service telegraf start
 TELEGRAF=$?
+
+mysql -e "CREATE DATABASE wordpress;"
+mysql -e "GRANT ALL PRIVILEGES ON wordpress.* TO 'admin'@'%' IDENTIFIED BY 'admin';"
+mysql < create_tables.sql
+mysql -e "FLUSH PRIVILEGES;"
 
 echo " ---> Server is running..."
 
