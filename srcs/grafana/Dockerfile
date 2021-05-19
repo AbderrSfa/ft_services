@@ -8,5 +8,7 @@ RUN apk add vim openrc grafana
 RUN openrc
 RUN touch run/openrc/softlevel
 
+COPY srcs/telegraf.conf /etc/telegraf.conf
+
 COPY srcs/init.sh /
 CMD sh ./init.sh

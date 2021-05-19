@@ -23,5 +23,7 @@ RUN wget https://wordpress.org/latest.tar.gz \
 COPY srcs/wp-config.php /var/www/wordpress/
 RUN chown -R nginx:nginx /var/www/wordpress/
 
+COPY srcs/telegraf.conf /etc/telegraf.conf
+
 COPY srcs/start.sh /
 CMD sh ./start.sh

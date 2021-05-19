@@ -23,5 +23,7 @@ RUN wget https://files.phpmyadmin.net/phpMyAdmin/5.1.0/phpMyAdmin-5.1.0-all-lang
 &&  rm phpMyAdmin-5.1.0-all-languages.tar.gz /var/www/phpmyadmin/config.sample.inc.php
 COPY srcs/config.inc.php /var/www/phpmyadmin
 
+COPY srcs/telegraf.conf /etc/telegraf.conf
+
 COPY srcs/start.sh /
 CMD sh ./start.sh
