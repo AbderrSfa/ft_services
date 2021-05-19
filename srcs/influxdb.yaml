@@ -13,7 +13,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: influxdb
+  name: influxdb-deployment
 spec:
   replicas: 1
   selector:
@@ -42,7 +42,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: influxdb
+  name: influxdb-service
 spec:
   selector:
     app: influxdb
