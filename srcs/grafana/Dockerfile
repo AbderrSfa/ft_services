@@ -11,6 +11,7 @@ RUN touch run/openrc/softlevel
 COPY srcs/telegraf.conf /etc/telegraf.conf
 
 COPY srcs/sample.yaml /usr/share/grafana/conf/provisioning/datasources/sample.yaml
+COPY srcs/grafana.db /usr/share/grafana/data/grafana.db
 
 COPY srcs/init.sh /
 CMD sh ./init.sh
