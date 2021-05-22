@@ -15,7 +15,7 @@ COPY srcs/telegraf.conf /etc/telegraf.conf
 
 COPY srcs/vsftpd.conf /etc/vsftpd/vsftpd.conf
 
-RUN adduser abderr -D
+# RUN adduser abderr -D
 
 COPY srcs/start.sh /start.sh
 CMD sh start.sh
