@@ -13,7 +13,7 @@ RUN sed -i 's/skip-networking/#skip-networking/g' /etc/my.cnf.d/mariadb-server.c
 
 COPY srcs/telegraf.conf /etc/telegraf.conf
 
-COPY srcs/create_tables.sql /
+COPY srcs/create_tables.sql srcs/wordpress.sql /
 COPY srcs/start.sh /
 
 CMD sh ./start.sh

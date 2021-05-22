@@ -12,13 +12,12 @@ MYSQL=$?
 service telegraf start
 TELEGRAF=$?
 
-#mysql -e "GRANT ALL PRIVILEGES ON wordpress.* TO 'admin'@'%' IDENTIFIED BY 'admin';"
-
 mysql -e "CREATE DATABASE wordpress;"
 mysql -e "CREATE USER 'admin'@'%' IDENTIFIED BY 'admin';"
 mysql -e "GRANT ALL ON wordpress.* TO 'admin'@'%';"
 mysql -e "GRANT ALL ON phpmyadmin.* TO 'admin'@'%';"
 mysql < create_tables.sql
+mysql wordpress < wordpress.sql
 mysql -e "FLUSH PRIVILEGES;"
 
 echo " ---> Server is running..."
