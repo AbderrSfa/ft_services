@@ -9,9 +9,8 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
 RUN openrc
 RUN touch run/openrc/softlevel
 
-RUN sed -i 's/skip-networking/#skip-networking/g' /etc/my.cnf.d/mariadb-server.cnf
-
 COPY srcs/telegraf.conf /etc/telegraf.conf
+COPY srcs/mariadb-server.cnf /etc/my.cnf.d/mariadb-server.cnf
 
 COPY srcs/create_tables.sql srcs/wordpress.sql /
 COPY srcs/start.sh /
