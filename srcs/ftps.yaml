@@ -19,6 +19,7 @@ spec:
         ports:
         - containerPort: 20
         - containerPort: 21
+        - containerPort: 29999
         - containerPort: 30000
 ---
 
@@ -41,7 +42,11 @@ spec:
       protocol: TCP
       port: 20
       targetPort: 20
-    - name: data
+    - name: passive1
+      protocol: TCP
+      port: 29999
+      targetPort: 29999
+    - name: passive2
       protocol: TCP
       port: 30000
       targetPort: 30000
