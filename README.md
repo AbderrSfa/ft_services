@@ -28,6 +28,12 @@ Grafana on port 3000
 
 FTPS on ports 20, 21. And 30000 (passive mode)
  ```
- ### Infrastructure 
- ### Grafana dashboards:
- ### Kubernetes dashboard:
+## Screenshots:
+### Infrastructure diagram:
+ ![Screenshot 2021-05-28 201606](https://user-images.githubusercontent.com/58333462/120032466-22b1ca80-bff2-11eb-9d1c-c6f638b007a4.png)
+
+### Kubernetes dashboard:
+<img width="1440" alt="Capture d’écran 2020-11-28 à 18 49 47" src="https://user-images.githubusercontent.com/58333462/120032695-78867280-bff2-11eb-8bac-0777baf547e7.png">
+
+### Grafana dashboards:
+ ![do-any-grafana-dashboard-designs](https://user-images.githubusercontent.com/58333462/120032550-41b05c80-bff2-11eb-9e37-faf3bcf2e764.jpg)
