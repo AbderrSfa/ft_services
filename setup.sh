@@ -25,3 +25,6 @@ kubectl apply -f ./srcs/wordpress.yaml
 kubectl apply -f ./srcs/grafana.yaml
 kubectl apply -f ./srcs/nginx.yaml
 kubectl apply -f ./srcs/ftps.yaml
+
+#start dashboard
+minikube dashboard
